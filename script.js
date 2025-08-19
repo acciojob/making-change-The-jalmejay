@@ -28,15 +28,14 @@ const makeChange = (c) => {
           mon -= value;
         }
       }
-
       return count;
     }
   }
 
-  const changes = new makeUSDChange(c);
+  const changes = new makeUSDChange(Number(c));
   return changes.change();
 };
-// console.log(makeChange(47))
+console.log(makeChange(47))
 Do not the change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
