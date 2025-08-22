@@ -36,7 +36,7 @@ const makeChange = (c) => {
   // const changes = new makeUSDChange(Number(c));
   // return changes.change();
 
-	if (num === 0) return "N"; // Romans used "nulla" for 0
+	if (c === 0) return "N"; // Romans used "nulla" for 0
 
   const romanNumerals = [
     ["M", 1000],
@@ -57,9 +57,9 @@ const makeChange = (c) => {
   let result = "";
 
   for (let [symbol, value] of romanNumerals) {
-    while (num >= value) {
+    while (c >= value) {
       result += symbol;
-      num -= value;
+      c -= value;
     }
   }
 
