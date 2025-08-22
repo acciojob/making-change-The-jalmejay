@@ -1,4 +1,5 @@
 const makeChange = (c) => {
+	if(!Number(c)<100) return "Please enter a Valid number between 1 and 99."
 	 let obj = [
     ["q", 25],
     ["d", 10],
@@ -6,7 +7,7 @@ const makeChange = (c) => {
     ["p", 1]
   ];
   
-  class makeUSDChange {
+  class coinTypes {
     constructor(num) {
       this.money = num;
       this.object = obj;
@@ -32,11 +33,11 @@ const makeChange = (c) => {
     }
   }
 
-  const changes = new makeUSDChange(Number(c));
+  const changes = new coinTypes(Number(c));
   return changes.change();
 };
-console.log(makeChange(47))
-console.log(makeChange(24))
+// console.log(makeChange(47))
+// console.log(makeChange(24))
 Do not the change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
