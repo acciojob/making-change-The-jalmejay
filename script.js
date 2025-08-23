@@ -7,30 +7,26 @@ if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number betwe
     ["n", 5],
     ["p", 1]
   ];
-  class CoinTypes {
-	  
+   class CoinTypes {
     constructor(num) {
       this.money = num;
       this.coins = obj;
     }
 
     change() {
-      let mon = this.money;
-      let count = {"q": 0, "d": 0, "n": 0, "p": 0};
+      let remaining = this.money;
+      let count = { "q": 0, "d": 0, "n": 0, "p": 0 };
 
-      let remaining = num;
-  for (const [sym, val] of coins) {
-    const qty = Math.floor(remaining / val);
-    if (qty > 0) {
-      count[sym] = qty;
-      remaining %= val;
-    }
-  }
+      for (const [sym, val] of this.coins) {
+        const qty = Math.floor(remaining / val);
+        if (qty > 0) {
+          count[sym] = qty;
+          remaining %= val;
+        }
       }
       return count;
     }
   }
-
   const changes = new CoinTypes(Number(c));
   return changes.change();
 };
