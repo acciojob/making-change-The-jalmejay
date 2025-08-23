@@ -11,24 +11,21 @@ if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number betwe
 	  
     constructor(num) {
       this.money = num;
-      this.object = obj;
+      this.coins = obj;
     }
 
     change() {
       let mon = this.money;
-      let count = {
-        "q": 0,
-        "d": 0,
-        "n": 0,
-        "p": 0
-      };
+      let count = {"q": 0, "d": 0, "n": 0, "p": 0};
 
-      for (let i = 0; i < this.object.length; i++) {
-        let [symbol, value] = this.object[i];
-        while (mon >= value) {
-          count[symbol]++;
-          mon -= value;
-        }
+      let remaining = num;
+  for (const [sym, val] of coins) {
+    const qty = Math.floor(remaining / val);
+    if (qty > 0) {
+      count[sym] = qty;
+      remaining %= val;
+    }
+  }
       }
       return count;
     }
