@@ -1,13 +1,14 @@
 const makeChange = (c) => {
 if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number between 1 and 99.";
-	let obj = [
+	
+  
+  class coinTypes {
+	  let obj = [
     ["q", 25],
     ["d", 10],
     ["n", 5],
     ["p", 1]
   ];
-  
-  class coinTypes {
     constructor(num) {
       this.money = num;
       this.object = obj;
