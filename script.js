@@ -32,6 +32,6 @@ if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number betwe
 };
 // console.log(makeChange(47))
 // console.log(makeChange(24))
-Do not the change the code below
+// Do not the change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
