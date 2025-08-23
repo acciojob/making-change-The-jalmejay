@@ -1,14 +1,14 @@
 const makeChange = (c) => {
 if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number between 1 and 99.";
 	
-  
-  class CoinTypes {
-	  let obj = [
+  let obj = [
     ["q", 25],
     ["d", 10],
     ["n", 5],
     ["p", 1]
   ];
+  class CoinTypes {
+	  
     constructor(num) {
       this.money = num;
       this.object = obj;
@@ -34,7 +34,7 @@ if (Number(c) < 1 || Number(c) >= 100) return "Please enter a valid number betwe
     }
   }
 
-  const changes = new coinTypes(Number(c));
+  const changes = new CoinTypes(Number(c));
   return changes.change();
 };
 // console.log(makeChange(47))
